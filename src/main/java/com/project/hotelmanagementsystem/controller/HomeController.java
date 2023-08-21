@@ -23,4 +23,6 @@ public class HomeController {
     public String blog(){return "blog.html";}
     @GetMapping("/blogDetail")
     public String blogDetail(){return "blog-single.html";}
+
+
 }
