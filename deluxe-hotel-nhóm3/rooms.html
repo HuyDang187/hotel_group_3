@@ -68,6 +68,24 @@
 
 
 <section class="ftco-section bg-light">
+    
+        <div class="search">
+            <form action="/search/rooms" id="search-form" method="get">
+                <input type="text" name="titleRoomKey" placeholder="Search rooms by title">
+                <select th:field="*{roomType}" class="room-type">
+                    <option value="">Search room by type</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Suite">Suite</option>
+                    <option value="Excutive">Excutive</option>
+                    <option value="Terrace">Terrace</option>
+                    <option value="President">President</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-9">

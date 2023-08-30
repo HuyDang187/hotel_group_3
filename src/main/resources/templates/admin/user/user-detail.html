@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin-User-Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<h1>User Detail</h1>
+<div th:if="${user != null}">
+    <p><strong>User ID:</strong> <span th:text="${user.id}"></span></p>
+    <p><strong>Full Name:</strong> <span th:text="${user.last_name} +' '+ ${user.first_name}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${user.username}"></span></p>
+    <p><strong>Phone:</strong> <span th:text="${user.phone_number}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${user.address}"></span></p>
+    <p><strong>Birth:</strong> <span th:text="${user.date_of_birth}"></span></p>
+
+</div>
+<div th:unless="${user != null}">
+    <p>User not found.</p>
+</div>
+<a th:href="@{/users/admin/list}">Back to User List</a>
+</body>
+</html>

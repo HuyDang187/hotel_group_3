@@ -9,4 +9,6 @@ public interface RoomService {
     Room findById(int theId);
     void save(Room theRoom);
     void deleteById(int theId);
+    List<Room> searchRoomsByTitleAndType(String titleRoomKey,String typeRoomKey);
+
 }

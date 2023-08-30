@@ -12700,3 +12700,51 @@ textarea.form-control {
         stroke-dashoffset: -136px;
     }
 }
+#search-form {
+    display : flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+    border: 1px solid #e6e6e6;
+    padding:10px;
+    margin-bottom: 20px;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+#search-form input {
+    height: 40px;
+    width :40%;
+    outline: none;
+    border: none;
+    border: 1px solid #e6e6e6;
+    padding-left: 10px;
+}
+.search {
+    width: 73%;
+    margin: auto;
+    
+}
+#search-form button {
+    width: 25%;
+    background: #8d703b;
+    border: 1px solid #8d703b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#search-form button:hover {
+    border: 1px solid #8d703b;
+    background: transparent;
+    color: #8d703b;
+}
+.room-type {
+    width: 30%;
+    outline: none;
+    border: none;
+    border: 1px solid #e6e6e6;
+    padding-left: 10px;
+}
+.room-type select {
+    color: #4d4d4d;
+    font-size: 14px;
+}
+

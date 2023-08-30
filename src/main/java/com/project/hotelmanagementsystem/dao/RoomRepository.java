@@ -8,4 +8,7 @@ import java.util.List;
 
 public interface RoomRepository extends JpaRepository<Room,Integer> {
     List<Room> findAll();
+    List<Room> findByRoomTitleContainingIgnoreCaseAndRoomTypeContainingIgnoreCase(String titleRoomKey,String typeRoomKey);
+    List<Room> findByRoomTitleContainingIgnoreCase(String titleRoomKey);
+    List<Room> findByRoomTypeContainingIgnoreCase(String typeRoomKey);
 }
