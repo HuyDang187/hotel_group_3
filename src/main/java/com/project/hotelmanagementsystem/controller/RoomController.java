@@ -41,7 +41,13 @@ public class RoomController {
         model.addAttribute("rooms",foundRooms);
         return "rooms.html";
     }
-
+    //get room detail
+    @GetMapping("/roomdetail")
+    public String roomDetail(@RequestParam(value = "roomId")int roomId,Model model){
+        Room room = roomService.findById(roomId);
+        model.addAttribute("room",room);
+        return "rooms-single.html";
+    }
 
 
     //show room list - admin
