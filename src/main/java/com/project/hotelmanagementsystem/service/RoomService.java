@@ -10,5 +10,5 @@ public interface RoomService {
     void save(Room theRoom);
     void deleteById(int theId);
     List<Room> searchRoomsByTitleAndType(String titleRoomKey,String typeRoomKey);
-
+//    List<Room> getRoomAvailable(int available);
 }

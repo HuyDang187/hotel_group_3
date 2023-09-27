@@ -1,7 +1,10 @@
 package com.project.hotelmanagementsystem.entity;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -29,7 +32,7 @@ public class User {
     @Column(name = "enabled")
     private int enabled;
 
-    public User() {
+    public User(String username, String password, List<GrantedAuthority> grantList) {
     }
 
     public User(int id, String username, String password, String first_name, String last_name, int phone_number, String address, Date date_of_birth, String users_img, int enabled) {
@@ -44,6 +47,8 @@ public class User {
         this.users_img = users_img;
         this.enabled = enabled;
     }
+
+
 
     public int getId() {
         return id;

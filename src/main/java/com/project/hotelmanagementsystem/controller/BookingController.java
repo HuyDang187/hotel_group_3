@@ -1,5 +1,6 @@
 package com.project.hotelmanagementsystem.controller;
 
+import com.project.hotelmanagementsystem.entity.Booking;
 import com.project.hotelmanagementsystem.service.BookingService;
 import com.project.hotelmanagementsystem.service.RoomService;
 import com.project.hotelmanagementsystem.service.UserService;
@@ -17,4 +18,5 @@ public class BookingController {
         bookingService=theBookingController;
 
     }
+
 }

@@ -26,4 +26,8 @@ public class DatasourceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder, DataSource appDataSource){
         return builder.dataSource(appDataSource).build();
     }
+    @ConfigurationProperties(prefix ="app.datasource")
+    public DataSource appDataSource(){
+        return DataSourceBuilder.create().build();
+    }
 }
