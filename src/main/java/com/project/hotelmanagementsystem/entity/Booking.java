@@ -10,7 +10,12 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
+    @Column(name = "guest_name")
+    private String guest_name;
+    @Column(name = "guest_phonenumber")
+    private int guest_phone;
+    @Column(name = "guest_email")
+    private String guest_email;
     @Column(name = "checkin_date")
     private Date checkin_date;
     @Column(name = "checkout_date")
@@ -28,7 +33,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int id, Date checkin_date, Date checkout_date, double total_price, String status, User user, Room room) {
+    public Booking(int id, Date checkin_date, Date checkout_date, double total_price, String status, User user, Room room,String guest_name,String guest_email,int guest_phone) {
         this.id = id;
         this.checkin_date = checkin_date;
         this.checkout_date = checkout_date;
@@ -36,6 +41,34 @@ public class Booking {
         this.status = status;
         this.user = user;
         this.room = room;
+        this.guest_name = guest_name;
+        this.guest_email = guest_email;
+        this.guest_phone = guest_phone;
+
+    }
+
+    public String getGuest_name() {
+        return guest_name;
+    }
+
+    public void setGuest_name(String guest_name) {
+        this.guest_name = guest_name;
+    }
+
+    public int getGuest_phone() {
+        return guest_phone;
+    }
+
+    public void setGuest_phone(int guest_phone) {
+        this.guest_phone = guest_phone;
+    }
+
+    public String getGuest_email() {
+        return guest_email;
+    }
+
+    public void setGuest_email(String guest_email) {
+        this.guest_email = guest_email;
     }
 
     public int getId() {

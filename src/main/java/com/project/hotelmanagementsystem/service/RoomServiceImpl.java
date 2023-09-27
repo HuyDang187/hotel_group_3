@@ -61,4 +61,9 @@ public class RoomServiceImpl implements RoomService {
             return Collections.emptyList();
         }
     }
+
+//    @Override
+//    public List<Room> getRoomAvailable(int available) {
+//        return roomRepository.findByRoomAvailableGreaterThan(0);
+//    }
 }

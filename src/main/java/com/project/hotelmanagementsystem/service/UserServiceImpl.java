@@ -3,12 +3,13 @@ package com.project.hotelmanagementsystem.service;
 import com.project.hotelmanagementsystem.dao.UserRepository;
 import com.project.hotelmanagementsystem.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
     @Autowired
     private UserServiceImpl(UserRepository theUserServiceImpl){
@@ -43,4 +44,8 @@ public class UserServiceImpl implements UserService{
     public void deteleById(int theId) {
         userRepository.deleteById(theId);
     }
+
+
+
+
 }
